@@ -149,12 +149,11 @@ h1 {
     flex-direction: row;
     align-items:flex-end;
 
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     max-width: 300px;
     margin-left: auto;
     margin-right: 50px;
     margin-bottom: 50px;
-    
     
 }
 
@@ -162,7 +161,6 @@ h1 {
 .social{
     max-width: 50px;
     max-height: 50px;
-    
 }
 
 .socialtiktok{
@@ -196,7 +194,6 @@ h1 {
     background-color: #DE94BF;
     
 }
-
 
 
 .game-info {
