@@ -1,0 +1,350 @@
+/* General Reset */
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'VT323', monospace;
+    background-color: #090401;
+    color: #151515;
+
+}
+
+.header {
+    background-color: #1E1870;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.logo .pacman {
+    width: 30px;
+    height: 30px;
+    background-color: #FFDE00;
+    border-radius: 50%;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    margin-right: 5px;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-family:'VT323',monospace;
+    background-color: #090401;
+    color: #F4F4F4;
+}
+
+.search-btn {
+    background-color: #F4F4F4;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 10px;
+    font-family:'VT323',monospace;
+    color:#1E1870;
+}
+
+h1 {
+    text-align: center;
+    color: #DE94BF;
+    font-size: 4rem;
+    margin: -10px 0 20px;
+    text-shadow: 2px 2px 0px black;
+}
+
+.game-section {
+    background-color: #1E1870;
+    margin: 0px auto;
+    padding: 20px;
+    max-width: 900px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.game-section2 {
+    background-color: #1E1870;
+    margin: 10px auto;
+    padding: 20px;
+    max-width: 900px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.game-content2 {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.game-img {
+    width: 240px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #151515;
+}
+
+.boxflex1{
+    display: flex;
+    
+}
+
+.boxflex2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 60px;
+    margin-top: 20px;
+    
+}
+
+.boxflex3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    
+}
+
+.flexbox2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.buttonFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.buttonFlex2{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;
+
+    justify-content:space-evenly;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    
+    
+}
+
+
+.social{
+    max-width: 50px;
+    max-height: 50px;
+    
+}
+
+.socialtiktok{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.game-packman {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #151515;
+    margin-bottom: 20px;
+}
+
+.machina {
+    width: 210px;
+    height: auto;
+    border-radius: 10px;
+    border: #DE94BF solid 1px;
+    background-color: #DE94BF;
+    
+}
+
+
+.machina2 {
+    width: 210px;
+    height: auto;
+    border-radius: 10px;
+    border: #DE94BF solid 10px;
+    background-color: #DE94BF;
+    
+}
+
+
+
+.game-info {
+    background-color: #090401;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 60%;
+    max-height: 100%;
+    box-shadow: 5px 5px 0px #151515;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.game-info2 {
+    background-color: #090401;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    max-height: 100%;
+    box-shadow: 5px 5px 0px #151515;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    background-color: #F4F4F4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0px black;
+    border-radius: 8px;
+    font-family:'VT323',monospace;
+}
+
+.play-btn {
+    background-color: #F4F4F4;
+    border-radius: 8px;
+    font-family:'VT323',monospace;
+    color:#010DF1;
+}
+
+.play-btn:hover {
+    background-color: #FF0000;
+    border-radius: 8px;
+    font-family:'VT323',monospace;
+    color:#F4F4F4;
+}
+
+
+#button3 {
+    background-color: #F4F4F4;
+    border-radius: 8px;
+    font-family:'VT323',monospace;
+    margin-left: 0px;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    margin-right: 110px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color:#010DF1;
+
+    
+    
+    
+}
+
+#button2 {
+    background-color: #F4F4F4;
+    border-radius: 8px;
+    font-family:'VT323',monospace;
+    margin-left: 0px;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 20px;
+    color:#010DF1;
+    
+    
+    
+    
+}
+
+#button1 {
+    background-color: #F4F4F4;
+    border-radius: 8px;
+    font-family:'VT323',monospace;
+    margin-left: 0px;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 20px;
+    color:#010DF1;
+    
+    
+}
+
+.contact {
+    background-color: #DE94BF;
+    /* background-color: #F4F4F4; */
+    color: #010DF1;
+    text-align: center;
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #090401;
+    color: #f4f4f4;
+    font-family:'VT323',monospace;
+}
+
+.send-btn {
+    background-color: #f4f4f4;
+    color: #010DF1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-family:'VT323',monospace;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1E1870;
+    color: white;
+}
