@@ -3,15 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Games Waka News</title>
     <link rel="stylesheet" href="../styles/releases.css">
-    <title>Years of bid releases</title>
 </head>
 <body>
-    
-    <h1>Pagina de releases</h1>
+    <header class="header">
+        <div class="logo">
+            
+            <img id="pacman-bg" class="image" src="data:image/png;base64,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" alt="Pacman Background"/>
+        </div>
+        <input type="text" placeholder="Search" class="search-bar">
+        <button class="search-btn">Search</button>
+    </header>
+
+
+    <main class="main">
+        <!-- Results section -->
+
+        <section class="results-section">
+    <!-- <img src="https://i.gifer.com/BrxG.gif" alt=""> -->
+    <!-- <img src="https://i.gifer.com/Y3il.gif" alt=""> -->
+
+
+        <img class="loader" src="https://i.gifer.com/2iiJ.gif" alt="loader">
+
+        <!-- <div class="card">
+
+        </div> -->
+
+
+        </section>
+    </main>
 
 
 
+    <footer>
+        <p>&copy;Copyright Rafael Valerio & Alexander Llave 2024.</p>
+    </footer>
     <script src="../scripts/releases.js"></script>
 </body>
 </html>
+
