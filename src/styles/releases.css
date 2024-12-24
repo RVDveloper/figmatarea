@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'VT323', monospace;
+    background-color: #33DED2;
+    color: #333;
+}
+
+.header {
+    background-color: #0099CC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.logo .pacman {
+    width: 30px;
+    height: 30px;
+    background-color: #FFDE00;
+    border-radius: 50%;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    margin-right: 5px;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-family:'VT323',monospace;
+}
+
+.search-btn {
+    background-color: #FFDE00;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 10px;
+    font-family:'VT323',monospace;
+}
+
+h1 {
+    text-align: center;
+    color: #EB4DB6;
+    font-size: 4rem;
+    margin: -10px 0 20px;
+    text-shadow: 2px 2px 0px black;
+}
+
+.main {
+    background-color: #5633DE;
+    margin: 0px auto;
+    padding: 20px;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.errorMessage {
+    color: white;
+    padding: 2%;
+    font-size: 1.225rem;
+}
+
+.loader {
+    width: 15%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0099CC;
+    color: white;
+    margin-top: 50px;
+}
+
+/* * CON JSSSS */
+
+.results-section {
+    min-height: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-title img {
+    width: 9%;
+}
+.main-title h1 {
+    margin-top: 11px;
+}
+
+
+
+.card {
+    width: 100%;
+    min-height: 130px;
+    background-color: yellow;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    flex-direction: column; 
+}
+
+.card img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+    height: 200px; /* Establece una altura fija o usa un valor dinámico */
+    object-fit: cover; /* Ajusta la imagen para que cubra el área sin perder proporción */
+    border-radius: 4px 4px 0 0; /* Opcional: redondear solo la parte superior */
+}
