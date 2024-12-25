@@ -13,6 +13,5 @@ function createInformativeItem(src, width, alt) {
 
 
 export const pikaLoader = (width) => createInformativeItem("https://i.gifer.com/2iiJ.gif", width, "loader");
-// export const moneyLoader = (width) => createInformativeItem("https://i.gifer.com/BrxG.gif", width, "loader");
 export const fetchFailedItem = (width) => createInformativeItem("https://i.gifer.com/XLIH.gif", width, "loader");
 

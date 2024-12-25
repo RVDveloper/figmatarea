@@ -98,8 +98,29 @@ footer {
     margin-top: 11px;
 }
 
-/* ! Cards */
+h3 {
+    font-size: 2.5rem;
+}
+.card-content-game {
+    display: flex;
+    gap: 1%;
+    width: 100%;
+}
 
+.card-content-game-img {
+    max-width: 150px;
+}
+
+.card-content-game-info {
+    display: flex;    
+    flex-direction: column;
+    gap: 3%;
+}
+
+
+
+
+/* ! Cards */
 .errorMessage {
     color: white;
     padding: 1%;
@@ -152,6 +173,9 @@ footer {
     padding: 0 20px;
     background-color: #f9f9f9;
     transition: max-height 0.1s ease-out, padding 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
 }
 
 .card.open .card-info {
