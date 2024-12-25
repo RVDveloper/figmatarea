@@ -14,6 +14,32 @@ export function createCards(cards, container) {
     container.append(...cardsElements);
 }
 
+export function createGame(src, name, description, company) {
+  const gameCard = document.createElement("div");
+  gameCard.classList.add("card-content-game");
+
+  const gameImg = document.createElement("img");
+  gameImg.classList.add("card-content-game-img");
+  gameImg.src = src;
+  gameImg.alt = name;
+
+  const gameInfo = document.createElement("div");
+  gameInfo.classList.add("card-content-game-info");
+
+  const gameTitle = document.createElement("h3");
+  gameTitle.textContent = name;
+
+  const gameDescription = document.createElement("p");
+  gameDescription.textContent = description;
+
+  const gameCompany = document.createElement("p");
+  gameCompany.textContent = company;
+
+  gameInfo.append(gameTitle, gameDescription, gameCompany);
+  gameCard.append(gameImg, gameInfo);
+
+  return gameCard;
+}
 
 
 

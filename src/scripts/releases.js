@@ -1,5 +1,6 @@
-import { createCards } from "/src/shared/components/cards/Cards.js";
-import { fetchData, handleFetchError } from "/src/shared/utils/api/ApiUtils.js";
+import { createCards, createGame } from "/src/shared/components/cards/Cards.js";
+import { fetchData, handleFetchError, cleanFetchResults } from "/src/shared/utils/api/ApiUtils.js";
+
 
 const yearCards = [
   {
@@ -67,39 +68,6 @@ function createGames(fetchResults, container) {
   });
   
   container.appendChild(fragment);
+
 }
 
-function createGame(src, name, description, company) {
-  const gameCard = document.createElement("div");
-  gameCard.classList.add("card-content-game");
-
-  const gameImg = document.createElement("img");
-  gameImg.classList.add("card-content-game-img");
-  gameImg.src = src;
-  gameImg.alt = name;
-
-  const gameInfo = document.createElement("div");
-  gameInfo.classList.add("card-content-game-info");
-
-  const gameTitle = document.createElement("h3");
-  gameTitle.textContent = name;
-
-  const gameDescription = document.createElement("p");
-  gameDescription.textContent = description;
-
-  const gameCompany = document.createElement("p");
-  gameCompany.textContent = company;
-
-  gameInfo.append(gameTitle, gameDescription, gameCompany);
-  gameCard.append(gameImg, gameInfo);
-
-  return gameCard;
-}
-
-function cleanFetchResults(fetchResults) {
-  return fetchResults.map((game) => {
-    const { cover, name, description, companies } = game;
-    const company = companies?.[0]?.name || "Unknown";
-    return { cover, name, description, company };
-  });
-}
