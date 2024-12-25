@@ -35,7 +35,7 @@ body {
     padding: 8px;
     border: none;
     border-radius: 5px;
-    font-family:'VT323',monospace;
+    font-family: 'VT323', monospace;
 }
 
 .search-btn {
@@ -45,7 +45,7 @@ body {
     cursor: pointer;
     border-radius: 8px;
     margin-left: 10px;
-    font-family:'VT323',monospace;
+    font-family: 'VT323', monospace;
 }
 
 h1 {
@@ -64,15 +64,6 @@ h1 {
     border-radius: 10px;
 }
 
-.errorMessage {
-    color: white;
-    padding: 1%;
-    font-size: 1.225rem;
-}
-
-.loader {
-    width: 15%;
-}
 
 footer {
     text-align: center;
@@ -82,8 +73,6 @@ footer {
     margin-top: 50px;
 }
 
-/* * CON JSSSS */
-
 .results-section {
     min-height: 700px;
     width: 100%;
@@ -91,7 +80,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px; 
+    gap: 20px;
 }
 
 .main-title {
@@ -104,28 +93,68 @@ footer {
 .main-title img {
     width: 9%;
 }
+
 .main-title h1 {
     margin-top: 11px;
 }
 
+/* ! Cards */
+
+.errorMessage {
+    color: white;
+    padding: 1%;
+    font-size: 1.225rem;
+}
 
 
 .card {
     width: 100%;
-    min-height: 130px;
-    background-color: yellow;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 0 0 5px #ffffff80;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    flex-direction: column; 
+    transition: all 0.3s ease-in-out;
 }
 
-.card img {
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
-    height: 200px; /* Establece una altura fija o usa un valor dinámico */
-    object-fit: cover; /* Ajusta la imagen para que cubra el área sin perder proporción */
-    border-radius: 4px 4px 0 0; /* Opcional: redondear solo la parte superior */
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    transition: all 0.5s ease-in-out;
+    white-space: nowrap;
+
+}
+
+.card-title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: all 0.5s ease-in-out;
+    width: 126px;
+    height: auto;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.card-image {
+    min-width: 700px;
+    height: 120px;
+    object-fit: cover;
+    border-top-left-radius: 150px;
+}
+
+.card-info {
+    max-height: 0;
+    height: 700px;
+    overflow: scroll;
+    padding: 0 20px;
+    background-color: #f9f9f9;
+    transition: max-height 0.1s ease-out, padding 0.3s ease-in-out;
+}
+
+.card.open .card-info {
+    max-height: 500px;
+    padding: 20px;
 }

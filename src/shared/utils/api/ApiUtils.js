@@ -1,11 +1,10 @@
 import { apiKey } from "/src/shared/constants/ApiKey.js";
-
+import { fetchFailedItem } from "/src/shared/components/loaders/Loaders.js";
 
 export async function fetchData(url) {
 
     const response = await fetch(url + `?key=${apiKey}`);
 
-    if(response.status === 429) throw new RangeError(`Error, too many requests have been made in too short a time ${response.status}`)
     if(!response.ok) throw new Error(`An error occurred while loading your page: ${response.status}`);
 
     const { results } = await response.json();
@@ -14,20 +13,16 @@ export async function fetchData(url) {
 
 }
 
-export function handleFetchError(e, src, imageWidth) {
+export function handleFetchError(err, imageWidth, container) {
 
-    const resultsSection= document.getElementsByClassName("results-section")[0];
-    resultsSection.innerHTML = "";
-
-    const errorImg = document.createElement("img");
-    errorImg.setAttribute("src", src);
-    errorImg.setAttribute("width", imageWidth);
-
+    container.innerHTML = "";
     const messageError = document.createElement("p");
-    messageError.textContent = e.message;
-    messageError.classList.add("errorMessage"); 
+    messageError.textContent = (err instanceof TypeError && err.message.includes("NetworkError")) 
+    ? "Error, too many requests have been made in too short a time - 429" 
+    : err.message;
 
-    resultsSection.append(errorImg, messageError);
+   messageError.style.cssText = "position: relative; top: 40%; text-align: center;";
+
+    container.append(fetchFailedItem(imageWidth), messageError);
 }
-
 

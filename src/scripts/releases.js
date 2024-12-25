@@ -1,45 +1,60 @@
+import { createCards } from "/src/shared/components/cards/Cards.js";
 import { fetchData, handleFetchError } from "/src/shared/utils/api/ApiUtils.js";
+import { pikaLoader } from "/src/shared/components/loaders/Loaders.js";
+
+
+
+const yearCards = [
+  {
+    textCard: "1983",
+    imageUrl: "",
+    onclickAction: OnClickAction
+  },
+  {
+    textCard: "2002",
+    imageUrl: "",
+    onclickAction: OnClickAction
+  },
+  {
+    textCard: "2003",
+    imageUrl: "",
+    onclickAction: OnClickAction
+  },
+  {
+    textCard: "1990",
+    imageUrl: "",
+    onclickAction: OnClickAction
+  },
+  {
+    textCard: "2005",
+    imageUrl: "",
+    onclickAction: OnClickAction
+  },
+];
 
 window.onload = () => {
-    getYearResults();
+  const resultsSection = document.getElementsByClassName("results-section")[0];
+  createCards(yearCards, resultsSection);
+};
 
+
+function OnClickAction(e) {
+
+  e.stopPropagation();
+  const year = e.currentTarget.firstElementChild.querySelector(".card-title").innerHTML;
+  const cardInfo = e.currentTarget.lastElementChild;
+
+  if(e.currentTarget.classList.contains("open")) getYearResults(cardInfo, year);
 }
 
 
-/*
+async function getYearResults(cardInfo, year) {
+  try {
+    const results = await fetchData(`https://retro.gg/api/search/year/${year}`);
+    cardInfo.innerHTML = ""
+    console.log(results);
 
-! AÑOS
-
- *1983 - 4
- *2002 - 2
- *2003 - 2 
-*1990 - 1
- *2005 - 1
-
-*/
-
-async function getYearResults() {
-
-    try {
-        
-        const results = await fetchData("https://retro.gg/api/search/games/super%20mario");
-        const loader = document.getElementsByClassName("loader")[0];
-        
-        loader.remove();
-
-
-    } catch (e) {
-        handleFetchError(e, "https://i.gifer.com/XLIH.gif", "17%");     
-    }
-
+  } catch (err) {
+    handleFetchError(err, "15%", cardInfo);
+  }
 }
-
-// function createCards() {
-    
-// }
-
-
-
-
-
-
