@@ -8,7 +8,7 @@
 
 body {
     font-family: 'VT323', monospace;
-    background-color: #33DED2;
+    background-color: #00CCFF;
     color: #333;
 }
 
@@ -46,18 +46,21 @@ body {
     border-radius: 8px;
     margin-left: 10px;
     font-family: 'VT323', monospace;
+    box-shadow: 3px 3px 0px black;
 }
 
 h1 {
     text-align: center;
-    color: #EB4DB6;
+    /* color: #EB4DB6; */
     font-size: 4rem;
     margin: -10px 0 20px;
     text-shadow: 2px 2px 0px black;
+    color:#010DF1;
 }
 
 .main {
-    background-color: #5633DE;
+    /* background-color: #5633DE; */
+    background-color: #FFDE00;
     margin: 0px auto;
     padding: 20px;
     max-width: 900px;
@@ -138,6 +141,7 @@ h3 {
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    box-shadow: 5px 5px 0px #333;
 }
 
 .card-header {
@@ -145,7 +149,7 @@ h3 {
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    background-color: #f4f4f4;
+    background-color: #FF0000;
     transition: all 0.5s ease-in-out;
     white-space: nowrap;
 
@@ -161,6 +165,8 @@ h3 {
     white-space: normal;
     word-wrap: break-word;
     text-align: center;
+    color:#f4f4f4;
+    text-shadow: 2px 2px 0px black;
 }
 
 .card-image {
@@ -175,11 +181,13 @@ h3 {
     height: 255px;
     overflow: scroll;
     padding: 0 20px;
-    background-color: #f9f9f9;
+    background-color: #FF0000;
     transition: max-height 0.1s ease-out, padding 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     gap: 5%;
+    color:#f4f4f4;
+    text-shadow: 2px 2px 0px black;
 }
 
 .card.open .card-info {
@@ -187,3 +195,75 @@ h3 {
     padding: 20px;
 }
 
+
+/* darkmode */
+
+button.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+button.dark-mode-toggle svg {
+    transition: transform 0.3s ease;
+    /* filter: drop-shadow(0 3px 4px #1E1870); */
+    filter: drop-shadow(3px 3px 0px black);
+    
+    
+}
+
+body.dark-mode button.dark-mode-toggle svg {
+    transform: rotate(360deg); 
+}
+
+button.dark-mode-toggle:hover::after {
+    content: "LightMode ON"; 
+    position: absolute;
+    bottom: 70px; 
+    right: 0;
+    background-color: #010DF1;
+    color: #f4f4f4;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+    opacity: 0; 
+    animation: showNotification 0.3s forwards;
+}
+
+body.dark-mode button.dark-mode-toggle:hover::after {
+    content: "DarkMode ON"; 
+    position: absolute;
+    bottom: 70px; 
+    right: 0;
+    background-color: #f4f4f4;
+    color: #010DF1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+    opacity: 0; 
+    animation: showNotification 0.3s forwards;
+}
+
+
+
+@keyframes showNotification {
+    to {
+        opacity: 1;
+    }
+}

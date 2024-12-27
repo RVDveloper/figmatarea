@@ -15,12 +15,12 @@ body {
 
 }
 
-.header {
+/* .header {
     background-color: #0099CC;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
+    justify-content: space-evenly;
+    padding: 10px 0px 0px 10px;
 }
 
 .logo .pacman {
@@ -30,16 +30,24 @@ body {
     border-radius: 50%;
     position: relative;
     clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
-    margin-right: 5px;
-}
+    /* margin-left: 110px; */
+    /* padding-left: 10px;  */
+/* }
 
 .search-bar {
-    width: 50%;
+    width: 80%;
     padding: 8px;
     border: none;
     border-radius: 5px;
     font-family:'VT323',monospace;
 }
+
+#search-form {
+    width: 60%;
+    
+}
+
+
 
 .search-btn {
     background-color: #FFDE00;
@@ -47,8 +55,92 @@ body {
     padding: 8px 12px;
     cursor: pointer;
     border-radius: 8px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
+    /* font-family:'VT323',monospace;
+}  */
+
+.header {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    padding: 10px;
+    padding-bottom: 30px;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; 
+}
+
+.image {
+    width: 70px; 
+    height: 70px;
+}
+
+#search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    width: 60%;
+}
+
+.search-bar {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 90%;
     font-family:'VT323',monospace;
+}
+
+.search-btn {
+    padding: 8px 12px;
+    background-color: #FFDE00; 
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family:'VT323',monospace;
+    box-shadow: 3px 3px 0px black;
+}
+
+.search-btn:hover {
+    background-color: #FF0000; 
+    color:#F4F4F4;
+}
+
+.entradas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -13px;
+    color: #F4F4F4;
+    font-size: 16px;
+    font-family:'VT323',monospace;
+
+    
+}
+
+.entradas-link{
+    color: #F4F4F4;
+    font-family:'VT323',monospace;
+    text-decoration: none;
+    padding: 2px 3px;
+    background-color: #FF0000; 
+    border-radius: 5px;
+    box-shadow: 3px 3px 0px black;
+
+}
+
+
+.entradas-link:hover{
+    background-color: #F4F4F4; 
+    color:#010DF1;
 }
 
 h1 {
@@ -264,7 +356,6 @@ h1 {
     width: 120px;
     height: 30px;
     text-align: center;
-    /* margin-left: 30px; */
     margin-right: 110px;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -350,11 +441,225 @@ h1 {
     text-transform: uppercase;
     border-radius: 8px;
     font-family:'VT323',monospace;
+    box-shadow: 3px 3px 0px black;
+}
+
+.send-btn:hover {
+    background-color: #f4f4f4;
+    color: #010DF1;
 }
 
 footer {
     text-align: center;
     padding: 10px;
     background-color: #0099CC;
+    color: #f4f4f4;
+}
+
+/* Añadir esto en tu archivo CSS */
+/* Estilos generales */
+body {
+    font-family: 'VT323', monospace;
+    background-color: #00CCFF;
+    color: #333;
+}
+
+.header {
+    background-color: #0099CC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.game-section, .game-section2 {
+    background-color: #FFEE00;
+    margin: 10px auto;
+    padding: 20px;
+    max-width: 900px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Estilos modo oscuro */
+body.dark-mode {
+    background-color: #090401;
+    color: #ffffff;
+}
+
+header.dark-mode {
+    background-color: #1E1870;
+    border-bottom: 1px solid #444;
+}
+
+.search-btn.dark-mode {
+    background-color: #F4F4F4;
+    color: #1E1870;
+}
+
+.search-btn:hover.dark-mode {
+    background-color: #FF0000;
+    color: #F4F4F4;
+}
+
+.search-bar.dark-mode{
+    background-color: #090401;
+    color: #F4F4F4;
+}
+
+.entradas-link.dark-mode{
+    background-color: #F4F4F4; 
+    color: #1E1870;
+
+}
+
+.entradas-link:hover.dark-mode{
+    background-color: #FF0000; 
+    color:#F4F4F4;
+}
+
+.game-section.dark-mode, .game-section2.dark-mode {
+    background-color: #1E1870;
+    color: #ddd;
+}
+
+.game-info.dark-mode, .game-info2.dark-mode {
+    background-color: #090401;
     color: white;
+}
+
+#button1.dark-mode, #button2.dark-mode, #button3.dark-mode {
+    color:#010DF1;
+    background-color: #F4F4F4;
+}
+
+.btn.dark-mode{
+    background-color: #F4F4F4;
+    color: white;
+}
+
+.play-btn.dark-mode{
+    background-color: #f4f4f4;
+    color: #010DF1;
+}
+
+.play-btn:hover.dark-mode {
+    background-color: #FF0000;
+    color:#F4F4F4;
+}
+
+#button1:hover.dark-mode, #button2:hover.dark-mode, #button3:hover.dark-mode{
+    background-color: #FF0000;
+    color:#F4F4F4;
+}
+
+h1.dark-mode{
+    color: #DE94BF;
+}
+
+.machina2.dark-mode{
+    border: #DE94BF solid 10px;
+    background-color: #DE94BF;
+}
+.machina.dark-mode{
+    border: #DE94BF solid 1px;
+    background-color: #DE94BF;
+}
+
+.send-btn.dark-mode{
+    background-color: #f4f4f4;
+    color: #010DF1;
+}
+.send-btn:hover.dark-mode {
+    background-color: #FF0000;
+    color: #F4F4F4;
+}
+
+footer.dark-mode{
+    background-color: #1E1870;
+    color: white;
+}
+
+.contact.dark-mode{
+    background-color: #DE94BF;
+    color: #010DF1;
+}
+
+.contact input.dark-mode, .contact textarea.dark-mode {
+    background-color: #090401;
+    color: #f4f4f4;
+}
+
+
+
+ button.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+button.dark-mode-toggle svg {
+    transition: transform 0.3s ease;
+    /* filter: drop-shadow(0 3px 4px #1E1870); */
+    filter: drop-shadow(3px 3px 0px black);
+    
+    
+}
+
+body.dark-mode button.dark-mode-toggle svg {
+    transform: rotate(360deg); 
+}
+
+button.dark-mode-toggle:hover::after {
+    content: "LightMode ON"; 
+    position: absolute;
+    bottom: 70px; 
+    right: 0;
+    background-color: #010DF1;
+    color: #f4f4f4;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+    opacity: 0; 
+    animation: showNotification 0.3s forwards;
+}
+
+body.dark-mode button.dark-mode-toggle:hover::after {
+    content: "DarkMode ON"; 
+    position: absolute;
+    bottom: 70px; 
+    right: 0;
+    background-color: #f4f4f4;
+    color: #010DF1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+    opacity: 0; 
+    animation: showNotification 0.3s forwards;
+}
+
+
+
+@keyframes showNotification {
+    to {
+        opacity: 1;
+    }
 }

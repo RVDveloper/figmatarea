@@ -32,8 +32,63 @@
     <footer>
         <p>&copy;Copyright Rafael Valerio & Alexander Llave 2024.</p>
     </footer>
-
     <script type="module" src="../scripts/game-search-results.js"></script>
+    <script>
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('search');
+        
+        
+        if (searchQuery) {
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('search-input').value = searchQuery; 
+                setTimeout(() => {
+                    document.getElementById('search-button').click();
+                }, 100);
+                
+                console.log("Buscando juegos relacionados con: " + searchQuery); // Solo como ejemplo
+            });
+        }
+    </script>
+    <script>
+        const darkModeButton = document.createElement('button');
+        darkModeButton.className = 'dark-mode-toggle';
+    
+        
+        const pacmanIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="#ffd500" width="32" height="32">
+            <path d="M32 2C15.43 2 2 15.43 2 32s13.43 30 30 30c4.1 0 8.03-.9 11.56-2.52 1.54-.71 1.54-2.89.02-3.61L20 32l23.58-24.87c1.52-.73 1.52-2.9-.02-3.62C40.03 2.9 36.1 2 32 2z"/>
+        </svg>`;
+        const ghostIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="#FFFFFF" width="32" height="32">
+            <path d="M32 2c-16.57 0-30 13.43-30 30v24c0 1.1.9 2 2 2h56c1.1 0 2-.9 2-2V32C62 15.43 48.57 2 32 2zM10 56c0-2.21 1.79-4 4-4s4 1.79 4 4 1.79 4 4 4 4-1.79 4-4 1.79-4 4-4 4 1.79 4 4 1.79 4 4 4 4-1.79 4-4 1.79-4 4-4 4 1.79 4 4h4v-8H10v8h4z"/>
+            <circle cx="24" cy="28" r="4" fill="#00BFFF"/>
+            <circle cx="40" cy="28" r="4" fill="#00BFFF"/>
+            <circle cx="24" cy="28" r="2" fill="#000000"/>
+            <circle cx="40" cy="28" r="2" fill="#000000"/>
+        </svg>`;
+    
+        
+        darkModeButton.innerHTML = pacmanIcon;
+    
+        document.body.appendChild(darkModeButton);
+    
+        darkModeButton.addEventListener('click', () => {
+            
+            document.body.classList.toggle('dark-mode');
+            document.querySelectorAll('header, .game-section, .game-section2, h1, footer, .contact, .game-info, .game-info2, .play-btn, .send-btn, .machina, .machina2, .play-btn:hover, .video-btn, .search-bar, .search-btn, .contact textarea, .contact input, #button1, #button2, #button3, #button1:hover, #button2:hover, #button3:hover, body.dark-mode button.dark-mode-toggle:hover::after, entradas-link, entradas-link:hover')
+                .forEach(el => {
+                    el.classList.toggle('dark-mode');
+                });
+    
+            
+            if (document.body.classList.contains('dark-mode')) {
+                darkModeButton.innerHTML = ghostIcon; 
+            } else {
+                darkModeButton.innerHTML = pacmanIcon; 
+            }
+        });
+    </script>
+    
 
 </body>
 </html>
