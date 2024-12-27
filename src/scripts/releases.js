@@ -1,5 +1,5 @@
 import { createCards, createGame } from '../shared/components/cards/Cards.js'
-import { fetchData, handleFetchError, cleanFetchResults } from "/src/shared/utils/api/ApiUtils.js";
+import { fetchData, handleFetchError, cleanFetchResults } from "../shared/utils/api/ApiUtils.js";
 
 
 const yearCards = [
