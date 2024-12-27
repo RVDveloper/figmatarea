@@ -1,5 +1,5 @@
-import { apiKey } from "/src/shared/constants/ApiKey.js";
-import { fetchFailedItem } from "/src/shared/components/loaders/Loaders.js";
+import { apiKey } from "../../constants/ApiKey.js";
+import { fetchFailedItem } from "../../components/loaders/Loaders.js";
 
 export async function fetchData(url) {
   const response = await fetch(url + `?key=${apiKey}`);

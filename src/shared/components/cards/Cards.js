@@ -1,4 +1,4 @@
-import { pikaLoader } from "/src/shared/components/loaders/Loaders.js";
+import { pikaLoader } from "../loaders/Loaders.js";
 
 let addOpenListenerAtCard = (cardElement) => cardElement.addEventListener("click", (e) => cardElement.classList.toggle('open'));
 
