@@ -1,4 +1,4 @@
-import { createCards, createGame } from "/src/shared/components/cards/Cards.js";
+import { createCards, createGame } from '../shared/components/cards/Cards.js'
 import { fetchData, handleFetchError, cleanFetchResults } from "/src/shared/utils/api/ApiUtils.js";
 
 
