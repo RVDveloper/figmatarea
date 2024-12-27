@@ -130,7 +130,36 @@ h3 {
   box-shadow: none; 
 }
 
+.entradas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5px;
+    color: #F4F4F4;
+    font-size: 16px;
+    font-family:'VT323',monospace;
 
+    
+}
+
+.entradas-link{
+    color: #F4F4F4;
+    font-family:'VT323',monospace;
+    text-decoration: none;
+    padding: 2px 3px;
+    background-color: #FF0000; 
+    border-radius: 5px;
+    box-shadow: 3px 3px 0px black;
+
+}
+
+
+.entradas-link:hover{
+    background-color: #F4F4F4; 
+    color:#010DF1;
+}
 
 /* ! Cards */
 .errorMessage {
