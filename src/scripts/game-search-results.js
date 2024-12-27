@@ -1,4 +1,4 @@
-import {createCards,createGame } from "/src//shared/components/cards/Cards.js";
+import {createCards,createGame } from "/src/shared/components/cards/Cards.js";
 import { pikaLoader } from "/src//shared/components/loaders/Loaders.js";
 import {cleanFetchResults, fetchData,handleFetchError, } from "/src/shared/utils/api/ApiUtils.js";
 
