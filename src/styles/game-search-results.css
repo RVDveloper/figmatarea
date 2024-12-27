@@ -12,6 +12,7 @@ body {
     color: #333;
 }
 
+
 .header {
     background-color: #0099CC;
     display: flex;
@@ -49,9 +50,14 @@ body {
     box-shadow: 3px 3px 0px black;
 }
 
+.search-btn:hover {
+    background-color: #FF0000;
+    color: #F4F4F4;
+}
+
+
 h1 {
     text-align: center;
-    /* color: #EB4DB6; */
     font-size: 4rem;
     margin: -10px 0 20px;
     text-shadow: 2px 2px 0px black;
@@ -66,7 +72,6 @@ h1 {
     max-width: 900px;
     border-radius: 10px;
 }
-
 
 footer {
     text-align: center;
@@ -144,6 +149,7 @@ h3 {
     box-shadow: 5px 5px 0px #333;
 }
 
+
 .card-header {
     display: flex;
     align-items: center;
@@ -197,6 +203,70 @@ h3 {
 
 
 /* darkmode */
+
+body.dark-mode{
+    background-color: #090401;
+}
+
+.header.dark-mode{
+    background-color: #1E1870;
+}
+
+.search-btn.dark-mode{
+    background-color: #F4F4F4;
+    color: #010DF1;
+}
+
+.search-btn:hover.dark-mode{
+    background-color: #FF0000;
+    color: #F4F4F4;
+}
+
+.search-bar.dark-mode{
+    background-color: #090401;
+    color: #F4F4F4;
+}
+
+h1.dark-mode{
+    color: #DE94BF;
+    /* color: #EB4DB6; */
+}
+
+.card-header.dark-mode {
+    
+    background-color: #DE94BF;
+    color: #010DF1;
+    
+
+}
+
+.card.dark-mode{
+    background-color: #DE94BF;
+    color: #010DF1;
+}
+
+
+.card-info.dark-mode{
+    background-color: #DE94BF;
+    color: #010DF1;
+
+}
+
+.card-title.dark-mode{
+    color: #010DF1;
+    text-shadow: 2px 2px 0px black;
+}
+
+.main.dark-mode{
+    background-color: #1E1870;
+    color: white;
+}
+
+footer.dark-mode{
+    background-color:#1E1870;
+    color: white;
+}
+
 
 button.dark-mode-toggle {
     position: fixed;
