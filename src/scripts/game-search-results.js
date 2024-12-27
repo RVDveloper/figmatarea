@@ -1,6 +1,6 @@
-import {createCards,createGame } from "/src/shared/components/cards/Cards.js";
-import { pikaLoader } from "/src//shared/components/loaders/Loaders.js";
-import {cleanFetchResults, fetchData,handleFetchError, } from "/src/shared/utils/api/ApiUtils.js";
+import {createCards,createGame } from "../shared/components/cards/Cards.js";
+import { pikaLoader } from "..//shared/components/loaders/Loaders.js";
+import {cleanFetchResults, fetchData,handleFetchError, } from "../shared/utils/api/ApiUtils.js";
 
 window.onload = () => {
   const searchButton = document.getElementById("search-button");
