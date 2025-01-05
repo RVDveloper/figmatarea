@@ -281,6 +281,11 @@ h1.dark-mode{
 
 }
 
+.card-content-game-info.dark-mode{
+    
+    color: #010DF1;
+}
+
 .card-title.dark-mode{
     color: #010DF1;
     text-shadow: 2px 2px 0px black;
