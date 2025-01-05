@@ -222,7 +222,7 @@ h3 {
     flex-direction: column;
     gap: 5%;
     color:#f4f4f4;
-    text-shadow: 2px 2px 0px black;
+    /* text-shadow: 2px 2px 0px black; */
 }
 
 .card.open .card-info {
