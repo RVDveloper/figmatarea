@@ -1,0 +1,63 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #212121;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #121212;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.container header {
+  font-size: 2.5em;
+  color: #ff6f00;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.container .subheader {
+  font-size: 1.4em;
+  color: #ff6f00;
+  margin-bottom: 20px;
+}
+.container .message-body {
+  font-size: 1.1em;
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+.container .message-body p {
+  margin-bottom: 15px;
+}
+.container .cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #ff6f00;
+  color: #121212;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+.container .cta-button:hover {
+  background-color: #e64a19;
+}
+.container footer {
+  font-size: 0.9em;
+  color: #aaa;
+  margin-top: 30px;
+}
+.container footer a {
+  color: #ff6f00;
+  text-decoration: none;
+}/*# sourceMappingURL=index.css.map */
