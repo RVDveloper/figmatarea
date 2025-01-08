@@ -222,7 +222,7 @@ h3 {
     flex-direction: column;
     gap: 5%;
     color:#f4f4f4;
-    text-shadow: 2px 2px 0px black;
+    
 }
 
 .card.open .card-info {
@@ -279,6 +279,11 @@ h1.dark-mode{
     background-color: #DE94BF;
     color: #010DF1;
 
+}
+
+.card-content-game-info.dark-mode{
+    
+    color: #010DF1;
 }
 
 .card-title.dark-mode{

@@ -86,16 +86,17 @@
 
         </section>
 
-        <!-- Contact Form -->
         <section class="contact">
             <h2>CONTACT US</h2>
-            <form>
-                <input type="email" placeholder="EMAIL ADDRESS" required>
-                <input type="text" placeholder="USERNAME" required>
-                <textarea placeholder="type your message"></textarea>
-                <button class="send-btn">SEND COMMENTS</button>
+            <form id="contact-form">
+                <input type="email" id="email" placeholder="EMAIL ADDRESS" required>
+                <input type="text" id="username" placeholder="USERNAME" required>
+                <textarea id="message" placeholder="type your message" required></textarea>
+                <button type="submit" class="send-btn" id="send-button">SEND COMMENTS</button>
+                <p id="feedback" style="color: rgb(0, 0, 255)!important; margin-top: 10px;"></p>
             </form>
         </section>
+        
     </main>
     <footer>
         <p>&copy;Copyright Rafael Valerio & Alexander Llave 2024.</p>
@@ -137,6 +138,60 @@
                 darkModeButton.innerHTML = pacmanIcon; 
             }
         });
+    </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const contactForm = document.getElementById("contact-form");
+            const sendButton = document.getElementById("send-button");
+            const feedback = document.getElementById("feedback");
+        
+            let clickCount = 0;
+            const maxClicks = 5; 
+            const endpoint = "https://mail-mciroservice-production.up.railway.app/mail";
+        
+            contactForm.addEventListener("submit", async (e) => {
+                e.preventDefault(); 
+        
+                if (clickCount >= maxClicks) {
+                    feedback.textContent = "You have reached the maximum number of submissions. Please try again later.";
+                    return;
+                }
+        
+                const formData = {
+                    email: document.getElementById("email").value,
+                    username: document.getElementById("username").value,
+                    message: document.getElementById("message").value,
+                };
+        
+                try {
+                    sendButton.disabled = true; 
+                    feedback.textContent = "Sending message...";
+        
+                    const response = await fetch(endpoint, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(formData),
+                    });
+        
+                    if (response.ok) {
+                        feedback.textContent = "Message sent successfully. Thank you for reaching out!";
+                        contactForm.reset(); 
+                    } else {
+                        const errorData = await response.json();
+                        feedback.textContent = `Error: ${errorData.message || "Unable to send message"}`;
+                    }
+                } catch (error) {
+                    feedback.textContent = "Connection error. Please check your internet connection.";
+                } finally {
+                    clickCount++;
+                    sendButton.disabled = false; 
+                }
+            });
+        });
+        
     </script>
 
     
