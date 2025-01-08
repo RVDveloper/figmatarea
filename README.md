@@ -1,4 +1,4 @@
-# Actividad M09 AC6 - Proyecto Firma Retro Waka News
+# Actividad M09 AC6 - Proyecto Figma Retro Waka News
 
 ### Prototipado
 - **Figma**: Herramienta utilizada para el diseño y la planificación del prototipo de la plataforma.  
